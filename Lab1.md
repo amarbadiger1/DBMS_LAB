@@ -54,10 +54,9 @@ CREATE TABLE BORROW (
 ### **Inserting Branches**  
 
 ```sql
-INSERT INTO BRANCH (Branchid, Branchname, HOD) VALUES
-(1, 'MCA', 'Dr. Smith'),
-(2, 'CSE', 'Dr. Johnson'),
-(3, 'ECE', 'Dr. Williams');
+INSERT INTO BRANCH (Branchid, Branchname, HOD) VALUES (1, 'MCA', 'Dr. Smith');
+INSERT INTO BRANCH (Branchid, Branchname, HOD) VALUES (2, 'CSE', 'Dr. Johnson');
+INSERT INTO BRANCH (Branchid, Branchname, HOD) VALUES (3, 'ECE', 'Dr. Williams');
 ```
 
 ---
@@ -65,12 +64,12 @@ INSERT INTO BRANCH (Branchid, Branchname, HOD) VALUES
 ### **Inserting Students**  
 
 ```sql
-INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES
-('S101', 'Alice', 'New York', 1, 2),
-('S102', 'Bob', 'Los Angeles', 1, 2),
-('S103', 'Charlie', 'Chicago', 2, 3),
-('S104', 'David', 'Houston', 2, 4),
-('S105', 'Eve', 'San Francisco', 3, 2);
+INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES ('S101', 'Alice', 'New York', 1, 2);
+INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES ('S102', 'Bob', 'Los Angeles', 1, 2);
+INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES ('S103', 'Charlie', 'Chicago', 2, 3);
+INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES ('S104', 'David', 'Houston', 2, 4);
+INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES ('S105', 'Eve', 'San Francisco', 3, 2);
+
 ```
 
 ---
@@ -78,11 +77,11 @@ INSERT INTO STUDENT (USN, Name, Address, Branchid, Sem) VALUES
 ### **Inserting Authors**  
 
 ```sql
-INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES
-(1, 'J.K. Rowling', 'UK', 55),
-(2, 'George Orwell', 'UK', 46),
-(3, 'Mark Twain', 'USA', 74),
-(4, 'Jane Austen', 'UK', 41);
+INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES (1, 'J.K. Rowling', 'UK', 55);
+INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES (2, 'George Orwell', 'UK', 46);
+INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES (3, 'Mark Twain', 'USA', 74);
+INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES (4, 'Jane Austen', 'UK', 41);
+
 ```
 
 ---
@@ -90,12 +89,12 @@ INSERT INTO AUTHOR (Authorid, Authorname, Country, Age) VALUES
 ### **Inserting Books**  
 
 ```sql
-INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES
-(101, 'Harry Potter', 1, 'Bloomsbury', 1),
-(102, '1984', 2, 'Secker & Warburg', 1),
-(103, 'The Adventures of Tom Sawyer', 3, 'American Publishing', 2),
-(104, 'Pride and Prejudice', 4, 'T. Egerton', 2),
-(105, 'Animal Farm', 2, 'Secker & Warburg', 3);
+INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES (101, 'Harry Potter', 1, 'Bloomsbury', 1);
+INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES (102, '1984', 2, 'Secker & Warburg', 1);
+INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES (103, 'The Adventures of Tom Sawyer', 3, 'American Publishing', 2);
+INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES (104, 'Pride and Prejudice', 4, 'T. Egerton', 2);
+INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES (105, 'Animal Farm', 2, 'Secker & Warburg', 3);
+
 ```
 
 ---
@@ -103,17 +102,16 @@ INSERT INTO BOOK (Bookid, Bookname, Authorid, Publisher, Branchid) VALUES
 ### **Inserting Borrowed Books**  
 
 ```sql
-INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES
-('S101', 101, '2024-03-10'),
-('S101', 102, '2024-03-15'),
-('S102', 102, '2024-03-12'),
-('S102', 105, '2024-03-20'),
-('S103', 103, '2024-03-05'),
-('S103', 104, '2024-03-08'),
-('S104', 104, '2024-03-18'),
-('S105', 101, '2024-03-25');
-```
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S101', 101, TO_DATE('2024-03-10', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S101', 102, TO_DATE('2024-03-15', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S102', 102, TO_DATE('2024-03-12', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S102', 105, TO_DATE('2024-03-20', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S103', 103, TO_DATE('2024-03-05', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S103', 104, TO_DATE('2024-03-08', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S104', 104, TO_DATE('2024-03-18', 'YYYY-MM-DD'));
+INSERT INTO BORROW (USN, Bookid, Borrowed_Date) VALUES ('S105', 101, TO_DATE('2024-03-25', 'YYYY-MM-DD'));
 
+```
 ---
 
 ## **Queries**  

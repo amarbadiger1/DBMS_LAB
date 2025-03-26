@@ -49,72 +49,71 @@ CREATE TABLE BOOK_ADOPTION (
 ## **Step 2: Insert Sample Data**
 ### **Insert Students**
 ```sql
-INSERT INTO STUDENT (regno, name, major, bdate) VALUES
-('S101', 'Alice', 'CSE', '2002-06-15'),
-('S102', 'Bob', 'ECE', '2001-04-20'),
-('S103', 'Charlie', 'MECH', '2003-09-10'),
-('S104', 'David', 'CSE', '2000-12-25'),
-('S105', 'Eve', 'ECE', '2002-03-18'),
-('S106', 'Frank', 'MECH', '2001-08-08'),
-('S107', 'Grace', 'CSE', '2003-07-25');
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S101', 'Alice', 'CSE', TO_DATE('2002-06-15', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S102', 'Bob', 'ECE', TO_DATE('2001-04-20', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S103', 'Charlie', 'MECH', TO_DATE('2003-09-10', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S104', 'David', 'CSE', TO_DATE('2000-12-25', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S105', 'Eve', 'ECE', TO_DATE('2002-03-18', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S106', 'Frank', 'MECH', TO_DATE('2001-08-08', 'YYYY-MM-DD'));
+INSERT INTO STUDENT (regno, name, major, bdate) VALUES ('S107', 'Grace', 'CSE', TO_DATE('2003-07-25', 'YYYY-MM-DD'));
+
 ```
 
 ---
 
 ### **Insert Courses**
 ```sql
-INSERT INTO COURSE (course_no, cname, dept) VALUES
-(101, 'Database Systems', 'CSE'),
-(102, 'Operating Systems', 'CSE'),
-(103, 'Electronics', 'ECE'),
-(104, 'Microprocessors', 'ECE'),
-(105, 'Mechanics', 'MECH'),
-(106, 'Thermodynamics', 'MECH');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (101, 'Database Systems', 'CSE');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (102, 'Operating Systems', 'CSE');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (103, 'Electronics', 'ECE');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (104, 'Microprocessors', 'ECE');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (105, 'Mechanics', 'MECH');
+INSERT INTO COURSE (course_no, cname, dept) VALUES (106, 'Thermodynamics', 'MECH');
+
 ```
 
 ---
 
 ### **Insert Books**
 ```sql
-INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES
-(1001, 'Database Fundamentals', 'Pearson', 'Elmasri'),
-(1002, 'Operating Systems Concepts', 'Wiley', 'Silberschatz'),
-(1003, 'Digital Electronics', 'McGraw-Hill', 'Morris Mano'),
-(1004, 'Microprocessor Systems', 'Pearson', 'Ramesh Gaonkar'),
-(1005, 'Engineering Mechanics', 'McGraw-Hill', 'Timoshenko'),
-(1006, 'Thermal Engineering', 'Oxford', 'Rajput'),
-(1007, 'Computer Networks', 'Pearson', 'Andrew Tanenbaum');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1001, 'Database Fundamentals', 'Pearson', 'Elmasri');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1002, 'Operating Systems Concepts', 'Wiley', 'Silberschatz');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1003, 'Digital Electronics', 'McGraw-Hill', 'Morris Mano');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1004, 'Microprocessor Systems', 'Pearson', 'Ramesh Gaonkar');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1005, 'Engineering Mechanics', 'McGraw-Hill', 'Timoshenko');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1006, 'Thermal Engineering', 'Oxford', 'Rajput');
+INSERT INTO TEXT (book_ISBN, book_title, publisher, author) VALUES (1007, 'Computer Networks', 'Pearson', 'Andrew Tanenbaum');
+
 ```
 
 ---
 
 ### **Insert Enrollments**
 ```sql
-INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES
-('S101', 101, 2, 85),
-('S102', 103, 2, 78),
-('S103', 105, 3, 90),
-('S104', 102, 2, 88),
-('S105', 104, 3, 75),
-('S106', 106, 3, 80),
-('S107', 101, 2, 95),
-('S101', 102, 2, 82),
-('S103', 106, 3, 89),
-('S104', 101, 2, 91);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S101', 101, 2, 85);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S102', 103, 2, 78);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S103', 105, 3, 90);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S104', 102, 2, 88);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S105', 104, 3, 75);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S106', 106, 3, 80);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S107', 101, 2, 95);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S101', 102, 2, 82);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S103', 106, 3, 89);
+INSERT INTO ENROLL (regno, course_no, sem, marks) VALUES ('S104', 101, 2, 91);
+
 ```
 
 ---
 
 ### **Insert Book Adoptions**
 ```sql
-INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES
-(101, 2, 1001),
-(102, 2, 1002),
-(103, 2, 1003),
-(104, 3, 1004),
-(105, 3, 1005),
-(106, 3, 1006),
-(101, 2, 1007);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (101, 2, 1001);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (102, 2, 1002);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (103, 2, 1003);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (104, 3, 1004);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (105, 3, 1005);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (106, 3, 1006);
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_ISBN) VALUES (101, 2, 1007);
 ```
 
 ---

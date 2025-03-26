@@ -21,12 +21,20 @@ CREATE TABLE STUDENT (
 
 ## **Step 2: Insert Sample Data**
 ```sql
-INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) VALUES
-('1001', 'Sam', '2002-06-15', 'CSE', 85, 90, 88, NULL, NULL),
-('1002', 'Sara', '2001-04-20', 'ECE', 80, 78, 85, NULL, NULL),
-('1003', 'Arjun', '2003-09-10', 'MECH', 75, 85, 80, NULL, NULL),
-('1004', 'Suman', '2000-12-25', 'CSE', 95, 92, 88, NULL, NULL),
-('1005', 'Vikram', '2002-03-18', 'ECE', 88, 85, 90, NULL, NULL);
+INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) 
+VALUES ('1001', 'Sam', TO_DATE('2002-06-15', 'YYYY-MM-DD'), 'CSE', 85, 90, 88, NULL, NULL);
+
+INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) 
+VALUES ('1002', 'Sara', TO_DATE('2001-04-20', 'YYYY-MM-DD'), 'ECE', 80, 78, 85, NULL, NULL);
+
+INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) 
+VALUES ('1003', 'Arjun', TO_DATE('2003-09-10', 'YYYY-MM-DD'), 'MECH', 75, 85, 80, NULL, NULL);
+
+INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) 
+VALUES ('1004', 'Suman', TO_DATE('2000-12-25', 'YYYY-MM-DD'), 'CSE', 95, 92, 88, NULL, NULL);
+
+INSERT INTO STUDENT (USN, Name, Date_of_Birth, Branch, Mark1, Mark2, Mark3, Total, GPA) 
+VALUES ('1005', 'Vikram', TO_DATE('2002-03-18', 'YYYY-MM-DD'), 'ECE', 88, 85, 90, NULL, NULL);
 ```
 
 ---

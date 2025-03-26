@@ -51,55 +51,69 @@ CREATE TABLE Match (
 ## **Step 2: Insert Values**
 ### **Insert Teams**
 ```sql
-INSERT INTO Team (Teamid, Team_Name, City, Coach, Captain) VALUES
-(1, 'Warriors', 'Mumbai', 'John Smith', 101),
-(2, 'Titans', 'Delhi', 'Mike Johnson', 201),
-(3, 'Strikers', 'Bangalore', 'Rahul Verma', 301),
-(4, 'Chargers', 'Chennai', 'David Warner', 401);
+INSERT INTO Team (Teamid, Team_Name, City, Coach, Captain) VALUES (1, 'Warriors', 'Mumbai', 'John Smith', 101);
+INSERT INTO Team (Teamid, Team_Name, City, Coach, Captain) VALUES (2, 'Titans', 'Delhi', 'Mike Johnson', 201);
+INSERT INTO Team (Teamid, Team_Name, City, Coach, Captain) VALUES (3, 'Strikers', 'Bangalore', 'Rahul Verma', 301);
+INSERT INTO Team (Teamid, Team_Name, City, Coach, Captain) VALUES (4, 'Chargers', 'Chennai', 'David Warner', 401);
+
 ```
 
 ---
 
 ### **Insert Players**
 ```sql
-INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES
-(101, 'Rohit Sharma', 34, '9876543210', 1),
-(102, 'Virat Kohli', 35, '9876543211', 1),
-(103, 'Shubman Gill', 24, '9876543212', 1),
-(201, 'MS Dhoni', 41, '9876543213', 2),
-(202, 'Rishabh Pant', 27, '9876543214', 2),
-(301, 'KL Rahul', 32, '9876543215', 3),
-(302, 'Jasprit Bumrah', 30, '9876543216', 3),
-(303, 'Hardik Pandya', 30, '9876543217', 3),
-(401, 'David Warner', 37, '9876543218', 4),
-(402, 'Steve Smith', 36, '9876543219', 4),
-(403, 'Marnus Labuschagne', 29, '9876543220', 4);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (101, 'Rohit Sharma', 34, '9876543210', 1);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (102, 'Virat Kohli', 35, '9876543211', 1);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (103, 'Shubman Gill', 24, '9876543212', 1);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (201, 'MS Dhoni', 41, '9876543213', 2);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (202, 'Rishabh Pant', 27, '9876543214', 2);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (301, 'KL Rahul', 32, '9876543215', 3);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (302, 'Jasprit Bumrah', 30, '9876543216', 3);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (303, 'Hardik Pandya', 30, '9876543217', 3);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (401, 'David Warner', 37, '9876543218', 4);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (402, 'Steve Smith', 36, '9876543219', 4);
+INSERT INTO Player (Playerid, Name, Age, Phone_Number, Teamid) VALUES (403, 'Marnus Labuschagne', 29, '9876543220', 4);
+
 ```
 
 ---
 
 ### **Insert Stadiums**
 ```sql
-INSERT INTO Stadium (Stadiumid, Stadium_Name, City, Area_Name, Pincode) VALUES
-(1, 'Wankhede Stadium', 'Mumbai', 'Marine Drive', '400020'),
-(2, 'Feroz Shah Kotla', 'Delhi', 'Daryaganj', '110002'),
-(3, 'Chinnaswamy Stadium', 'Bangalore', 'MG Road', '560001'),
-(4, 'Chepauk Stadium', 'Chennai', 'Triplicane', '600005');
+INSERT INTO Stadium (Stadiumid, Stadium_Name, City, Area_Name, Pincode) VALUES (1, 'Wankhede Stadium', 'Mumbai', 'Marine Drive', '400020');
+INSERT INTO Stadium (Stadiumid, Stadium_Name, City, Area_Name, Pincode) VALUES (2, 'Feroz Shah Kotla', 'Delhi', 'Daryaganj', '110002');
+INSERT INTO Stadium (Stadiumid, Stadium_Name, City, Area_Name, Pincode) VALUES (3, 'Chinnaswamy Stadium', 'Bangalore', 'MG Road', '560001');
+INSERT INTO Stadium (Stadiumid, Stadium_Name, City, Area_Name, Pincode) VALUES (4, 'Chepauk Stadium', 'Chennai', 'Triplicane', '600005');
+
 ```
 
 ---
 
 ### **Insert Matches**
 ```sql
-INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) VALUES
-(1, 1, 2, 1, '2024-03-15', '14:00:00', 1, 102),
-(2, 2, 3, 2, '2024-03-16', '18:00:00', 3, 302),
-(3, 3, 4, 3, '2024-03-17', '20:00:00', 3, 303),
-(4, 4, 1, 4, '2024-03-18', '14:00:00', 4, 401),
-(5, 1, 3, 1, '2024-03-19', '18:00:00', 1, 103),
-(6, 2, 4, 2, '2024-03-20', '20:00:00', 2, 202),
-(7, 3, 1, 1, '2024-03-21', '18:00:00', 3, 303),
-(8, 4, 2, 4, '2024-03-22', '20:00:00', 4, 402);
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (1, 1, 2, 1, TO_DATE('2024-03-15', 'YYYY-MM-DD'), '14:00:00', 1, 102);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (2, 2, 3, 2, TO_DATE('2024-03-16', 'YYYY-MM-DD'), '18:00:00', 3, 302);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (3, 3, 4, 3, TO_DATE('2024-03-17', 'YYYY-MM-DD'), '20:00:00', 3, 303);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (4, 4, 1, 4, TO_DATE('2024-03-18', 'YYYY-MM-DD'), '14:00:00', 4, 401);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (5, 1, 3, 1, TO_DATE('2024-03-19', 'YYYY-MM-DD'), '18:00:00', 1, 103);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (6, 2, 4, 2, TO_DATE('2024-03-20', 'YYYY-MM-DD'), '20:00:00', 2, 202);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (7, 3, 1, 1, TO_DATE('2024-03-21', 'YYYY-MM-DD'), '18:00:00', 3, 303);
+
+INSERT INTO Match (Matchid, Team1, Team2, Stadiumid, Match_Date, Match_Time, Winning_Team, Man_of_Match) 
+VALUES (8, 4, 2, 4, TO_DATE('2024-03-22', 'YYYY-MM-DD'), '20:00:00', 4, 402);
 ```
 
 ---
