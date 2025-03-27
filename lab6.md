@@ -180,5 +180,3 @@ HAVING COUNT(book_ISBN) > 2;
 - **Primary and foreign keys** maintain integrity.
 - **Sample data** is provided for easy testing.
 - **Queries cover enrollment details, department-wise students, book adoption, popular courses, and major publishers.**
-
-This script is **fully executable** in MySQL or any SQL-based system. Let me know if you need modifications! 🚀

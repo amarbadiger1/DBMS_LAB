@@ -41,7 +41,6 @@ CREATE TABLE BORROW (
     USN VARCHAR(10),
     Bookid INT,
     Borrowed_Date DATE,
-    PRIMARY KEY (USN, Bookid),
     FOREIGN KEY (USN) REFERENCES STUDENT(USN),
     FOREIGN KEY (Bookid) REFERENCES BOOK(Bookid)
 );
@@ -130,7 +129,7 @@ WHERE Sem = 2 AND Branchid = (SELECT Branchid FROM BRANCH WHERE Branchname = 'MC
 ```sql
 SELECT * FROM STUDENT
 WHERE USN NOT IN (SELECT DISTINCT USN FROM BORROW);
-```
+``` 
 
 ---
 
